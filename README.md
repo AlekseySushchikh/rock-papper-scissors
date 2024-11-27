@@ -1,62 +1,62 @@
-# Камень, Ножницы, Бумага - Турнир
+# Rock, Paper, Scissors Tournament
 
-Этот проект реализует стратегические игры на основе популярной игры "Камень, Ножницы, Бумага" с использованием различных агентов, которые используют разные подходы для принятия решений. Проект проводит турнир между этими агентами и выводит результаты игр.
+This project implements strategic games based on the popular "Rock, Paper, Scissors" game using various agents that employ different decision-making approaches. The project conducts a tournament between these agents and displays the game results.
 
-## Структура проекта
+## Project Structure
 
 ```
-/agents                  # Папка с агентами, реализующими различные стратегии
-├── rock.py              # Стратегия, которая всегда выбирает камень
-├── paper.py             # Стратегия, которая всегда выбирает бумагу
-├── scissors.py          # Стратегия, которая всегда выбирает ножницы
-├── copy_opponent.py     # Стратегия, которая копирует ход противника
-├── reactionary.py       # Стратегия, которая выбирает ход, побеждающий ход противника
-├── counter_reactionary.py  # Стратегия, контрящая стратегию reactionary
-├── statistical.py       # Стратегия, которая выбирает ход, побеждающий наиболее частый ход противника
-├── alternating.py       # Стратегия, которая поочередно выбирает ходы
-├── random_choice.py     # Стратегия, выбирающая ход случайным образом
-├── cycle_opponent.py    # Стратегия, которая циклично выбирает ходы, основываясь на последнем ходе противника
-├── adaptive_response.py # Стратегия, адаптирующаяся к ходам противника
-├── delayed_reaction.py # Стратегия, реагирующая на ход противника с задержкой
-└── __init__.py          # Инициализация пакета агентов
+/agents                  # Folder containing agents with different strategies
+├── rock.py              # Strategy that always chooses rock
+├── paper.py             # Strategy that always chooses paper
+├── scissors.py          # Strategy that always chooses scissors
+├── copy_opponent.py     # Strategy that copies the opponent's move
+├── reactionary.py       # Strategy that chooses a move that beats the opponent's move
+├── counter_reactionary.py  # Strategy that counters the reactionary strategy
+├── statistical.py       # Strategy that chooses a move that beats the opponent's most frequent move
+├── alternating.py       # Strategy that alternates between moves
+├── random_choice.py     # Strategy that chooses a move randomly
+├── cycle_opponent.py    # Strategy that cyclically chooses a move based on the opponent's last move
+├── adaptive_response.py # Strategy that adapts to the opponent's moves
+├── delayed_reaction.py # Strategy that reacts to the opponent's move with a delay
+└── __init__.py          # Package initialization for agents
 
-tournament.py            # Основной файл для проведения турнира между агентами
-README.md                # Этот файл
+tournament.py            # Main script to run the tournament between agents
+README.md                # This file
 ```
 
-## Описание агентов
+## Agent Descriptions
 
-В проекте представлены различные стратегии, которые могут быть использованы для игры "Камень, Ножницы, Бумага":
+This project includes different strategies for playing "Rock, Paper, Scissors":
 
-1. **rock** — всегда выбирает камень.
-2. **paper** — всегда выбирает бумагу.
-3. **scissors** — всегда выбирает ножницы.
-4. **copy_opponent** — копирует последний ход противника.
-5. **reactionary** — выбирает ход, который побеждает ход противника.
-6. **counter_reactionary** — контрирует стратегию `reactionary`.
-7. **statistical** — выбирает ход, который побеждает наиболее частый ход противника.
-8. **alternating** — поочередно выбирает ходы: камень, бумагу, ножницы.
-9. **random_choice** — выбирает ход случайным образом.
-10. **cycle_opponent** — циклично выбирает победный ход на основе последнего хода противника.
-11. **adaptive_response** — адаптируется к ходам противника, побеждая их.
-12. **delayed_reaction** — реагирует на ход противника с задержкой.
+1. **rock** — always chooses rock.
+2. **paper** — always chooses paper.
+3. **scissors** — always chooses scissors.
+4. **copy_opponent** — copies the opponent's last move.
+5. **reactionary** — chooses a move that beats the opponent's move.
+6. **counter_reactionary** — counters the reactionary strategy.
+7. **statistical** — chooses a move that beats the opponent's most frequent move.
+8. **alternating** — alternates between rock, paper, and scissors.
+9. **random_choice** — randomly chooses a move.
+10. **cycle_opponent** — cyclically chooses a winning move based on the opponent's last move.
+11. **adaptive_response** — adapts to the opponent's moves, choosing moves that beat them.
+12. **delayed_reaction** — reacts to the opponent's move with a delay.
 
-## Запуск турнира
+## Running the Tournament
 
-Чтобы запустить турнир, выполните следующий код:
+To run the tournament, execute the following command:
 
 ```bash
 python tournament.py
 ```
 
-Этот скрипт проведет турнир между всеми агентами, и выведет результаты в консоль.
+This script will conduct the tournament between all agents and display the results in the console.
 
-## Как это работает?
+## How it Works
 
-1. Каждый агент выбирает ход по своей стратегии.
-2. Турнир проводится между всеми возможными парами агентов.
-3. Результаты каждого матча сохраняются в словарь и выводятся по завершению турнира.
+1. Each agent chooses a move based on its strategy.
+2. The tournament is run between all possible pairs of agents.
+3. The results of each match are stored in a dictionary and displayed after the tournament concludes.
 
-## Лицензия
+## License
 
-Этот проект использует открытую лицензию. Подробности см. в файле LICENSE.
+This project uses an open license. See the LICENSE file for details.
